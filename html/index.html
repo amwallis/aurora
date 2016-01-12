@@ -1,4 +1,4 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
 <head>
 		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
@@ -7,15 +7,27 @@
 		<title>Aurora</title>
 		<script type="text/javascript" src="/webiopi.js"></script>
 		<script type="text/javascript" src="/scripts/main.js"></script>
+		<script type="text/javascript" src="/scripts/colors.js"></script>
 		<link rel="stylesheet" type="text/css" href="/styles/main.css">
-		<link rel="shortcut icon" sizes="196x196" href="/img/aurora-icon.png" />
+		<link rel="apple-touch-icon" sizes="196x196" href="/img/aurora-icon.png" />
 </head>
 <body>
 	</br>
 	</br>
-	<div id= "content" align="center"></div>
+	<div id="content" align="center"></div>
 	</br>
 	</br>
+	<canvas id="colorPicker" width="480" height="480" onclick="colorCoord()">
+	<script>
+      var canvas = document.getElementById('colorPicker');
+      // canvas.addEventListener('click', function() { }, false);
+      var context = canvas.getContext('2d');
+      var imageObj = new Image();
+      imageObj.onload = function() {
+        context.drawImage(imageObj, 0, 0);
+      };
+      imageObj.src = '/img/colorPicker.png';
+    </script>
 	</br>
 	<p align="center">Push buttons to turn on colored lights</p>
 	</br>
