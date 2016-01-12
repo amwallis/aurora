@@ -19,14 +19,14 @@
 	</br>
 	<canvas id="colorPicker" width="480" height="480" onclick="colorCoord()">
 	<script>
-      var canvas = document.getElementById('colorPicker');
-      // canvas.addEventListener('click', function() { }, false);
-      var context = canvas.getContext('2d');
-      var imageObj = new Image();
-      imageObj.onload = function() {
-        context.drawImage(imageObj, 0, 0);
-      };
-      imageObj.src = '/img/colorPicker.png';
+		var canvas = document.getElementById('colorPicker');
+		// canvas.addEventListener('click', function() { }, false);
+		var context = canvas.getContext('2d');
+		var imageObj = new Image();
+		imageObj.onload = function() {
+		context.drawImage(imageObj, 0, 0);
+		};
+		imageObj.src = '/img/colorPicker.png';
     </script>
 	</br>
 	<p align="center">Push buttons to turn on colored lights</p>
