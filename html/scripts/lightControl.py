@@ -1,3 +1,9 @@
+
+#SETUP PYTHON PATH
+import sys
+sys.path.append('/usr/local/lib/python3.2/dist-packages/Pillow-3.1.0-py3.2-linux-armv71.egg/PIL/')
+
+import Image
 import webiopi
 import datetime
 
@@ -6,6 +12,9 @@ GPIO = webiopi.GPIO
 RED_PIN = 26
 GRN_PIN = 19
 BLU_PIN = 13
+
+im = Image.open("../img/colorPicker.png")
+rgb_im = im.convert('RGB')
 
 # setup function is automatically called at WebIOPi startup
 def setup():
@@ -31,3 +40,5 @@ def get_color(x, y):
     print ("hi")
     print(x)
     print(y)
+    r, g, b = rgb_im.getpixel((x, y))
+    print (r, g, b)
