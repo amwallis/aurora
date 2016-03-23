@@ -15,21 +15,13 @@
 	</br>
 	<div id="content" align="center"></div>
 	</br>
-	<form onsubmit="return myFunction()">
-	  Red: <input type="text" id="red" size="20"><br>
-	  Green: <input type="text" id="green" size="20"><br>
-	  Blue: <input type="text" id="blue" size="20"><br><br>
-	  <input type="submit" value="Submit"> 
-	</form>
-	<script> function myFunction() {
-		var redColor= document.getElementById("red").value;
-	    var greenColor = document.getElementById("green").value;
-	    var blueColor = document.getElementById("blue").value;
-	    submitOK = "true";
-	    var rgbColors = [ redColor, greenColor, blueColor ];
-	    webiopi().callMacro("set_color", rgbColors);
-    }
-	</script>
+
+	<div align="center">
+		Red %:<input type="text" id="redPct" /><br/>
+		Green %: <input type="text" id="greenPct" /><br/>
+		Blue %: <input type="text" id="bluePct" /><br/>
+	<div id="controls"></div>
+
 	<canvas id="colorPicker" width="480" height="480" onclick="colorCoord()">
 	<script>
 		var canvas = document.getElementById('colorPicker');
@@ -41,6 +33,7 @@
 		};
 		imageObj.src = '/img/colorPicker.png';
     </script>
+
 	</br>
 </body>
 </html>
