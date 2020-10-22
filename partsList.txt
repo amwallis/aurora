@@ -8,5 +8,3 @@ Test Plugs                            (4)
 MCP1407-E/P Microchip Gate Driver     (3)
 Capacitors 100uF                      (3)
 Capacitors 0.1uF                      (3)
-
-addd random stuff here
